@@ -1,4 +1,5 @@
 RAPID Intelligence
+
 RAPID Intelligence is a disaster response and geospatial intelligence platform that helps teams detect, analyze, and prioritize affected areas after natural disasters. The system combines satellite imagery, AI-assisted change detection, and map-based overlays to provide actionable insight for emergency response and planning.
 
 Overview
