@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply m-0 font-sans antialiased text-gray-200 bg-[#020B11] overflow-hidden;
+  }
+  
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 217, 255, 0.2) transparent;
+  }
+  *::-webkit-scrollbar { width: 4px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: rgba(0, 217, 255, 0.2); border-radius: 2px; }
+  *::-webkit-scrollbar-thumb:hover { background: rgba(0, 217, 255, 0.4); }
+}
+
+@layer utilities {
+  .hud-panel {
+    @apply bg-[rgba(4,35,52,0.88)] border border-[#00D9FF] backdrop-blur-md;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.15), inset 0 0 20px rgba(0, 217, 255, 0.05);
+  }
+  
+  .hud-panel-red {
+    @apply bg-[rgba(35,4,4,0.88)] border border-[#FF354F] backdrop-blur-md;
+    box-shadow: 0 0 10px rgba(255, 53, 79, 0.15), inset 0 0 20px rgba(255, 53, 79, 0.05);
+  }
+
+  .hud-panel-orange {
+    @apply bg-[rgba(35,20,4,0.88)] border border-[#FF9D3D] backdrop-blur-md;
+    box-shadow: 0 0 10px rgba(255, 157, 61, 0.15), inset 0 0 20px rgba(255, 157, 61, 0.05);
+  }
+
+  .hud-text-cyan {
+    @apply text-[#00D9FF];
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+  }
+
+  .hud-text-critical {
+    @apply text-[#FF354F];
+    text-shadow: 0 0 8px rgba(255, 53, 79, 0.5);
+  }
+
+  .hud-cut-corner {
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+  
+  .hud-glow {
+    animation: pulse-glow 2s infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px rgba(0, 217, 255, 0.2); }
+    100% { box-shadow: 0 0 15px rgba(0, 217, 255, 0.6); }
+  }
+  
+  .hud-blinker {
+    animation: blinker 1.5s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% { opacity: 0; }
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 217, 255, 0.2) transparent;
+  }
+}
