@@ -1,105 +1,194 @@
-RAPID Intelligence
+# 🌍 RAPID Intelligence
 
-RAPID Intelligence is a disaster response and geospatial intelligence platform that helps teams detect, analyze, and prioritize affected areas after natural disasters. The system combines satellite imagery, AI-assisted change detection, and map-based overlays to provide actionable insight for emergency response and planning.
+**AI-Assisted Geospatial Intelligence & Disaster Response Platform**
 
-Overview
-Natural disasters often create urgent operational needs: identifying affected regions, estimating population exposure, evaluating damage, and prioritizing rescue and relief efforts. Traditional methods are often slow, fragmented, and reactive. RAPID Intelligence addresses this challenge by providing a live geospatial dashboard that supports rapid visual analysis of disaster zones.
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Google Earth Engine](https://img.shields.io/badge/Google_Earth_Engine-4285F4?style=flat&logo=google-earth&logoColor=white)](https://earthengine.google.com/)
+[![Mapbox](https://img.shields.io/badge/Mapbox_GL-000000?style=flat&logo=mapbox&logoColor=white)](https://www.mapbox.com/)
 
-Using a combination of remote sensing data and geospatial processing, the platform helps users understand:
+**RAPID Intelligence** is a disaster response and geospatial intelligence platform that helps emergency teams detect, analyze, and prioritize affected areas after natural disasters. By combining **Sentinel-2 satellite imagery**, **AI-assisted change detection**, and **interactive map overlays**, the platform transforms raw remote-sensing data into actionable insights for rapid rescue and relief planning.
 
-where the disaster impact is highest,
-which zones require immediate action,
-how much population may be affected,
-and what areas show the strongest post-disaster changes.
-Problem Statement
-After a disaster, emergency teams need to act quickly but often lack a unified view of the affected area. Response planning is slowed by disconnected data sources, manual analysis, and limited visibility into localized impact. This leads to delayed assistance, inefficient resource allocation, and reduced situational awareness.
+---
 
-Solution
-RAPID Intelligence brings together:
+## 📋 Table of Contents
+- [Overview](#-overview)
+- [Problem Statement](#-problem-statement)
+- [Solution](#-solution)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [System Architecture](#-system-architecture)
+- [Use Cases](#-use-cases)
+- [Getting Started](#-getting-started)
+- [Roadmap](#-roadmap)
+- [Why This Project Matters](#-why-this-project-matters)
 
-satellite imagery,
-geospatial analytics,
-disaster-zone prioritization,
-and interactive map visualization.
-The platform enables users to define a disaster location or analysis zone and receive a summary of conditions, risk indicators, and damage-related intelligence. It helps turn raw satellite observations into actionable insights for rescue and recovery planning.
+---
 
-Key Features
-Interactive disaster map visualization
-Before-and-after satellite imagery comparison
-Damage and vegetation anomaly analysis
-Population and impact scoring
-Priority zone recommendations
-Geospatial analysis radius selection
-API-driven backend for intelligence workflows
-Extensible architecture for future overlays and reports
-Tech Stack
-Frontend
-React
-Vite
-Mapbox GL
-Framer Motion
-Tailwind CSS
-Zustand
-Turf.js
-Backend
-Python
-FastAPI
-Google Earth Engine
-Pydantic
-Uvicorn
-Data and Analysis
-Sentinel-2 imagery
-Remote sensing change detection
-Geospatial overlays
-Impact metrics and scoring
-Project Architecture
-The project consists of:
+## 🔍 Overview
 
-a React frontend for the user-facing dashboard,
-a FastAPI backend for analysis endpoints,
-and Earth Engine integrations for satellite-based intelligence.
-The frontend renders interactive map layers and summary metrics.
-The backend generates analysis responses based on coordinates, risk scoring, and imagery overlays.
-Use Cases
-Flood response and damage assessment
-Cyclone aftermath monitoring
-Landslide and terrain degradation analysis
-Wildfire damage intelligence
-Humanitarian prioritization planning
-Post-disaster situational awareness for agencies and responders
-Getting Started
-Prerequisites
-Node.js and npm
-Python 3.11+
-A Google Earth Engine account and credentials if using live satellite processing
-Mapbox access token for map rendering
-Frontend Setup
-Navigate to the frontend directory
-Install dependencies
-Start the development server
-Backend Setup
-Create and activate a Python virtual environment
-Install required Python packages
-Start the FastAPI server
-Project Goals
-RAPID Intelligence is designed to:
+Natural disasters create urgent operational demands: identifying impacted regions, estimating population exposure, evaluating structural and environmental damage, and prioritizing rescue operations. Traditional assessment workflows are often slow, fragmented, and reactive.
 
-accelerate disaster assessment after extreme events,
-improve situational awareness for responders,
-support data-driven allocation of relief resources,
-and provide a scalable foundation for further geospatial intelligence features.
-Roadmap
-Phase 1
-Core dashboard and map interface
-Backend health and analysis API
-Basic imagery and impact simulation
-Phase 2
-Enhanced metrics and scoring
-Real Earth Engine integration
-Additional disaster overlays
-Phase 3
-Historical analysis and trend monitoring
-Advanced reporting and decision support
-Regional intelligence for broader deployments
-Why This Project Matters
-Disasters do not wait, and response decisions must be informed by timely, accurate information. RAPID Intelligence helps bridge the gap between raw satellite data and actionable emergency planning. By turning geospatial intelligence into a fast, user-friendly response tool, the project contributes to more resilient and prepared disaster management systems.
+**RAPID Intelligence** provides a live geospatial dashboard for rapid visual and analytical assessment of disaster zones, helping responders answer critical questions immediately:
+- **Where** is the disaster impact most severe?
+- **Which** zones require immediate emergency intervention?
+- **How much** population is potentially exposed?
+- **What** regions exhibit the strongest post-disaster environmental or structural changes?
+
+---
+
+## ⚠️ Problem Statement
+
+In the immediate aftermath of a disaster, emergency response teams must act quickly—yet they frequently lack a unified, real-time view of the affected region. Response planning is hindered by:
+- Disconnected and siloed data sources
+- Time-consuming manual satellite analysis
+- Limited visibility into localized, ground-level impact
+
+These bottlenecks lead to delayed assistance, inefficient resource allocation, and reduced situational awareness when every minute counts.
+
+---
+
+## 💡 Solution
+
+RAPID Intelligence unifies remote sensing and real-time geospatial analytics into a single, intuitive platform:
+- **Satellite Imagery Processing:** Automated ingestion and comparison of pre- and post-event Sentinel-2 imagery.
+- **Geospatial Analytics:** Spatial calculations, vegetation/damage anomaly scoring, and population exposure modeling.
+- **Zone Prioritization:** Automated risk indicators and priority zone recommendations.
+- **Interactive Visualization:** Circle-to-Search Area of Interest (AOI) selection, heatmap overlays, and safest-route guidance.
+
+---
+
+## ✨ Key Features
+
+- **Interactive Disaster Map:** Smooth, hardware-accelerated geospatial rendering powered by Mapbox GL.
+- **Before-and-After Imagery Comparison:** Side-by-side and overlay comparisons of pre- and post-disaster satellite captures.
+- **Circle-to-Search & AOI Selection:** Define custom analysis radii or areas of interest directly on the map.
+- **Damage & Vegetation Anomaly Analysis:** Remote-sensing indices to highlight structural disruption and terrain changes.
+- **Population & Impact Scoring:** Quantifies exposed populations and generates severity metrics per zone.
+- **Priority Zone & Safest-Route Recommendations:** Highlights high-priority rescue zones and assists emergency navigation.
+- **API-Driven Intelligence Workflows:** Modular FastAPI backend built for extensible geospatial reports and overlays.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- **Framework & Build:** React, Vite
+- **Geospatial & Mapping:** Mapbox GL, Turf.js
+- **Styling & Animation:** Tailwind CSS, Framer Motion
+- **State Management:** Zustand
+
+### **Backend**
+- **Framework:** Python 3.11+, FastAPI, Uvicorn
+- **Data Validation:** Pydantic
+- **Remote Sensing Engine:** Google Earth Engine (GEE)
+
+### **Data & Geospatial Analysis**
+- **Imagery:** Sentinel-2 Multispectral Satellite Data
+- **Analytics:** Remote Sensing Change Detection, Spatial Overlays, Risk & Impact Scoring
+
+---
+
+## 🏗️ System Architecture
+
+```text
+┌───────────────────────────┐       REST API (JSON / GeoJSON)       ┌───────────────────────────┐
+│      React Frontend       │ ◄───────────────────────────────────► │      FastAPI Backend      │
+│  (Mapbox GL + Turf.js)    │                                       │   (Python + Pydantic)     │
+└───────────────────────────┘                                       └─────────────┬─────────────┘
+                                                                                  │
+                                                                                  ▼
+                                                                    ┌───────────────────────────┐
+                                                                    │    Google Earth Engine    │
+                                                                    │   (Sentinel-2 & Spatial   │
+                                                                    │      Change Analysis)     │
+                                                                    └───────────────────────────┘
+```
+
+1. **Frontend Dashboard (React):** Captures user-selected coordinates/AOI radii, renders interactive Mapbox layers, heatmaps, and displays real-time risk summaries.
+2. **Intelligence API (FastAPI):** Validates spatial queries, orchestrates geospatial computations, and serves risk scores and overlay metadata.
+3. **Satellite Processing (Google Earth Engine):** Queries Sentinel-2 archives, computes pre/post-disaster spectral differences, and returns processed geospatial intelligence.
+
+---
+
+## 🎯 Use Cases
+
+- **Flood Response & Damage Assessment:** Rapidly map inundation extents and stranded populations.
+- **Cyclone Aftermath Monitoring:** Identify coastal and infrastructure damage corridors.
+- **Landslide & Terrain Degradation:** Detect slope failures and blocked transit routes.
+- **Wildfire Damage Intelligence:** Track burn scars, vegetation loss, and proximity to settlements.
+- **Humanitarian Prioritization:** Guide NGOs and disaster agencies toward the highest-need zones.
+
+---
+
+## 🚀 Getting Started
+
+### **Prerequisites**
+- **Node.js** (v18+) and **npm**
+- **Python** (3.11+)
+- **Mapbox Access Token** (for map rendering)
+- **Google Earth Engine Account & Credentials** (for live satellite processing)
+
+### **1. Clone the Repository**
+```bash
+git clone [https://github.com/Shailesh14u/RAPID-Intelligence.git](https://github.com/Shailesh14u/RAPID-Intelligence.git)
+cd RAPID-Intelligence
+```
+
+### **2. Backend Setup (FastAPI)**
+```bash
+cd backend
+
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate        # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure environment variables
+cp .env.example .env            # Add your GEE credentials/project ID
+
+# Start the FastAPI server
+uvicorn main:app --reload --port 8000
+```
+
+### **3. Frontend Setup (React + Vite)**
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Configure environment variables
+cp .env.example .env            # Add VITE_MAPBOX_TOKEN=your_token_here
+
+# Start the development server
+npm run dev
+```
+
+---
+
+## 🗺️ Roadmap
+
+### **Phase 1: Core Foundation**
+- [x] Interactive dashboard and Mapbox GL interface
+- [x] Backend health and geospatial analysis endpoints
+- [x] AOI radius selection and baseline impact scoring
+
+### **Phase 2: Live Remote Sensing & Overlays**
+- [ ] Full live Google Earth Engine pipeline integration
+- [ ] Enhanced multi-factor vulnerability and population scoring
+- [ ] Additional hazard-specific overlays (flood depth, burn severity)
+
+### **Phase 3: Advanced Decision Support**
+- [ ] Historical disaster trend monitoring and time-series playback
+- [ ] Automated PDF/GeoJSON situation reports for field teams
+- [ ] Multi-region deployment support for agency workflows
+
+---
+
+## 🌟 Why This Project Matters
+
+Disasters do not wait, and emergency response decisions are only as effective as the information behind them. **RAPID Intelligence** bridges the gap between complex satellite remote sensing and fast, intuitive field operations—empowering responders to save time, optimize resources, and protect communities when it matters most.
